@@ -1,4 +1,3 @@
-# Chat Application
 
 import socket
 import threading
@@ -6,12 +5,12 @@ import tkinter as tk
 from tkinter import scrolledtext, Toplevel, Label, messagebox
 import random
 
-# Server Configuration
-HOST = '192.168.2.178'
-PORT = 8080
-USERNAME = "adminownerceo"
+#ip and port change!
+HOST = 'your ip here'
+PORT = port here
+USERNAME = "change this if you want or its gonna say this in chat"
 
-# Create a socket
+
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server_socket.bind((HOST, PORT))
 server_socket.listen(5)
@@ -51,7 +50,7 @@ def accept_connections():
         print(f"Connection from {addr} has been established.")
         threading.Thread(target=handle_client, args=(client_socket, addr)).start()
 
-# GUI Setup
+
 class ChatApp:
     def __init__(self, master):
         self.master = master
