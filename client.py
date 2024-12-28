@@ -1,15 +1,15 @@
-# Chat Client Application
+
 
 import socket
 import threading
 import tkinter as tk
 from tkinter import simpledialog, scrolledtext, messagebox
 
-# Server Configuration
+ Server Configuration
 HOST = 'your ip here'
 PORT = your port here
 
-# Create a socket
+
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 try:
@@ -18,7 +18,7 @@ try:
 except Exception as e:
     print(f"Connection failed: {e}")
 
-# GUI Setup
+
 class ChatClientApp:
     def __init__(self, master):
         self.master = master
@@ -57,7 +57,7 @@ class ChatClientApp:
         client_socket.send(full_message.encode('utf-8'))
 
     def bomb_chat(self):
-        for _ in range(10):  # Send the message 10 times
+        for _ in range(10):  
             client_socket.send(f"{self.username}: sigmaboywashere\n".encode('utf-8'))
 
     def receive_messages(self):
@@ -76,8 +76,8 @@ class ChatClientApp:
                 break
 
     def show_connected_users(self):
-        # This is a placeholder for the actual implementation
-        connected_users = "User1 (192.168.2.179)\nUser2 (192.168.2.180)"  # Example data
+        
+        connected_users = "this funtion is broken i will fix it soon!)"  
         messagebox.showinfo("Connected Users", connected_users)
 
 def run_client_gui():
