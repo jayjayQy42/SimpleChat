@@ -6,8 +6,8 @@ import tkinter as tk
 from tkinter import simpledialog, scrolledtext, messagebox
 
 # Server Configuration
-HOST = '192.168.2.178'
-PORT = 8080
+HOST = 'your ip here'
+PORT = your port here
 
 # Create a socket
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
